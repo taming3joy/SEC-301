@@ -1,2 +1,3 @@
 .venv
 face_access_control/data/public
+__pycache__/

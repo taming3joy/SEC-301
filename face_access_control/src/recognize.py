@@ -26,10 +26,10 @@ def recognize_face(image_path, whitelist, threshold=0.45):
     face_encodings = face_recognition.face_encodings(image, face_locations)
 
     if len(face_encodings) == 0:
-        return "Retry", "No face detected", None
+        return "Retry", "No face detected", None, None
 
     if len(face_encodings) > 1:
-        return "Retry", "Multiple faces detected", None
+        return "Retry", "Multiple faces detected", None, None
 
     input_encoding = face_encodings[0]
 
