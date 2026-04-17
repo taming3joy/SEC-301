@@ -26,7 +26,7 @@ class FaceApp:
         self.current_frame_bgr = None
         self.frozen_frame_bgr = None
         self.is_frozen = False
-        self.threshold = 0.45
+        self.threshold = 0.40
 
         # Webcam and image display
         self.image_label = tk.Label(root)

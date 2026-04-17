@@ -16,10 +16,10 @@ def load_whitelist(embeddings_file):
     print(f"[INFO] Loaded embeddings from: {embeddings_file}")
     return whitelist
 
-def compute_confidence(distance, threshold=0.45, k=15):
+def compute_confidence(distance, threshold=0.40, k=15):
     return 1 / (1 + np.exp(k * (distance - threshold)))
 
-def recognize_face(image_path, whitelist, threshold=0.45):
+def recognize_face(image_path, whitelist, threshold=0.40):
     image = face_recognition.load_image_file(image_path)
 
     face_locations = face_recognition.face_locations(image)
