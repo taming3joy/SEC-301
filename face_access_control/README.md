@@ -48,7 +48,7 @@ python src/enroll.py
 python src/UI.py
 ```
 
-- Upload an image
+- Capture your face using the webcam
 - System will output:
   - Grant Access
   - Deny Access
