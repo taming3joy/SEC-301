@@ -12,7 +12,15 @@ This project focuses on experimenting with security challenges in a face access 
 - `data/authorized/` -> enrolled user images
 - `data/test/` -> test images
 - `models/embeddings/` -> saved face embeddings
-- `src/` -> source code (`enroll.py`, `recognize.py`, UIs)
+- `notebooks/` -> development and experiment workflow:
+  - `create_public_datasets.ipynb`: build subset datasets from public sources for controlled testing.
+  - `system_development.ipynb`: prototype and tune baseline recognition pipeline logic before moving stable code into `src/`.
+  - `mitigation_development.ipynb`: prototype and tune liveness detection mitigation pipeline logic before moving stable code into `src/`.
+- `src/` -> source code:
+  - `enroll.py`: saves face embeddings for authorized users.
+  - `recognize.py`: compares a face with enrolled users and returns the access control decision and results.
+  - `liveness.py`: checks if the face is live (not a spoof from a photo/screen).
+  - `ui_baseline.py` and `ui_mitigated.py`: UIs that show the access control interface.
 
 ## Setup
 
