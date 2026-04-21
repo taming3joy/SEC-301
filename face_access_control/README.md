@@ -24,20 +24,47 @@ This project focuses on experimenting with security challenges in a face access 
 
 ## Setup
 
-### 1. Go to project directory
+### 1. Go to repository root
+
+If you cloned the full `SEC-301` repository, start from the `SEC-301` folder (parent of `face_access_control`).
+
+```bash
+cd SEC-301
+```
+
+### 2. Use Python 3.12
+
+This project is tested on Python 3.12. Using Python 3.14 may cause dependency compatibility issues.
+
+```bash
+python3.12 --version
+```
+
+### 3. Create virtual environment (recommended)
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+```
+
+### 4. Go to project folder
 
 ```bash
 cd face_access_control
 ```
 
-### 2. Create virtual environment (optional but recommended)
+### 5. Upgrade installer tools and pin setuptools
+
+`face_recognition_models` still depends on `pkg_resources`, so keep `setuptools` below 81.
+
+If `setuptools==80.9.0` is already pinned in `requirements.txt`, this step is optional but recommended on fresh environments.
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+python -m pip install --upgrade pip wheel
+python -m pip install "setuptools==80.9.0"
 ```
 
-### 3. Install requirements
+### 6. Install requirements
 
 ```bash
 pip install -r requirements.txt
