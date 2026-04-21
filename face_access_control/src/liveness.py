@@ -86,7 +86,7 @@ class LivenessDetector:
         self,
         face_retry_delay_seconds: float = 2.0,
         blink_threshold: float = 0.21,
-        turn_threshold: float = 0.075,
+        turn_threshold: float = 0.07,
         forward_tolerance: float = 0.03,
         min_closed_frames: int = 2,
         step_delay_seconds: float = 1.5,
